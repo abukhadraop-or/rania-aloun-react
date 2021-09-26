@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PagesContainer = styled.nav`
   margin: 2rem 0 0;

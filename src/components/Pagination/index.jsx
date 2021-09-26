@@ -1,12 +1,12 @@
-import React from "react";
-import _ from "lodash";
-import ProbTypes from "prop-types";
+import React from 'react';
+import _ from 'lodash';
+import ProbTypes from 'prop-types';
 import {
   PagesContainer,
   PagesList,
   PageNumber,
   PageButton,
-} from "./pagination";
+} from './pagination';
 
 /**
  * pagination component for showing number of pages

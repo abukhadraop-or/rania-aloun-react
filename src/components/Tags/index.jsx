@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { getTags } from "services/fakeTagsService";
+import React, { useState, useEffect } from 'react';
+import { getTags } from 'services/fakeTagsService';
+import ProbTypes from 'prop-types';
 import {
   Tag,
   TagButton,
   TagsHeader,
   TagsContainer,
   OuterTagsContainer,
-} from "./tags";
-import ProbTypes from "prop-types";
+} from './tags';
 
 /**
  * return full name of the user
@@ -27,6 +27,7 @@ function Tags(props) {
         <TagsContainer>
           <TagsHeader>Popular Tags</TagsHeader>
           {tags.map((item) => (
+            // eslint-disable-next-line no-underscore-dangle
             <TagButton key={item._id}>
               <Tag onClick={() => onTagSelect(item.name)}>{item.name}</Tag>
             </TagButton>

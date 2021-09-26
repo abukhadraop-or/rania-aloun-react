@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const OuterTagsContainer = styled.div`
   margin: 0 1rem;
 `;
 
 export const TagsHeader = styled.p`
-  font-family: "source sans pro", sans-serif;
+  font-family: 'source sans pro', sans-serif;
   font-size: 1.3rem;
   margin: 0 0 0.5rem 0;
   padding: 0 0.5rem;

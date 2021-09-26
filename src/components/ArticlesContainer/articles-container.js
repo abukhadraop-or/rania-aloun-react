@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ReactComponent as heart } from "assets/heart.svg";
-import smile from "assets/smile.jpg";
+import styled from 'styled-components';
+import { ReactComponent as heart } from 'assets/heart.svg';
+import smile from 'assets/smile.jpg';
 
 export const Container = styled.div`
   margin: 3rem 0;
@@ -37,7 +37,7 @@ export const UserData = styled.div`
 export const UserName = styled.p`
   color: #5cb85c;
   cursor: pointer;
-  font-family: "source sans pro", sans-serif;
+  font-family: 'source sans pro', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin: 0;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BannerDiv = styled.div`
   align-items: center;
@@ -12,7 +12,7 @@ export const BannerDiv = styled.div`
 
 export const BannerP = styled.p`
   color: #fff;
-  font-family: "source sans pro", sans-serif;
+  font-family: 'source sans pro', sans-serif;
   font-size: 1.5rem;
   margin: 0;
   text-align: center;

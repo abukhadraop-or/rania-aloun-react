@@ -1,10 +1,10 @@
-import React from "react";
-import Header from "components/Header";
+import React from 'react';
+import Header from 'components/Header';
 
 /**
- * Component holding temporary text for sign in page, to be implemented 
+ * Component holding temporary text for sign in page, to be implemented
  */
-function SignIn(props) {
+function SignIn() {
   return (
     <>
       <Header />

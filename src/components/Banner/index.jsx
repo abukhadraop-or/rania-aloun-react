@@ -1,11 +1,11 @@
-import React from "react";
-import { BannerDiv, BannerP } from "./banner";
-import { BannerTitle } from "components/title";
+import React from 'react';
+import { BannerTitle } from 'components/title';
+import { BannerDiv, BannerP } from './banner';
 
 /**
  * Component for showing the Banner of the home page.
  */
-function index(props) {
+function index() {
   return (
     <BannerDiv>
       <BannerTitle>conduit</BannerTitle>

@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from 'lodash';
 
 /**
  * returns sliced array of articles based on desired page size
@@ -6,7 +6,7 @@ import _ from "lodash";
  * @param   {number} pageNumber current page number in page
  * @return  {array} array of sliced articles
  */
-export function paginate(items, pageNumber) {
+export default function paginate(items, pageNumber) {
   const pageSize = 3;
 
   const startIndex = (pageNumber - 1) * pageSize;

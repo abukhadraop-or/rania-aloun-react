@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { getArticles, LikeArticle } from "services/fakeArticlesService";
-import Tags from "components/Tags";
-import { GlobalContainer } from "components/page-content-containers";
-import ArticlesContainer from "components/ArticlesContainer";
+import React, { useState, useEffect } from 'react';
+import { getArticles, LikeArticle } from 'services/fakeArticlesService';
+import Tags from 'components/Tags';
+import { GlobalContainer } from 'components/page-content-containers';
+import ArticlesContainer from 'components/ArticlesContainer';
 
 /**
  * Component for holding the structure of articles preview.
+ *
+ * @return {JSX.Element}
  */
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -44,7 +46,7 @@ function Articles() {
           selectedTag={selectedTag}
           currentPage={currentPage}
           handlePageChange={handlePageChange}
-        ></ArticlesContainer>
+        />
       </GlobalContainer>
     </>
   );

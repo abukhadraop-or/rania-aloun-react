@@ -1,9 +1,9 @@
-import React from "react";
-import ProbTypes from "prop-types";
-import Pagination from "components/Pagination";
-import ContentNav from "components/ContentNav";
-import { paginate } from "utilities/paginate";
-import { filter } from "utilities/filter";
+import React from 'react';
+import ProbTypes from 'prop-types';
+import Pagination from 'components/Pagination';
+import ContentNav from 'components/ContentNav';
+import paginate from 'utilities/paginate';
+import filter from 'utilities/filter';
 import {
   UserImg,
   UserData,
@@ -22,20 +22,24 @@ import {
   LastLineContainer,
   FirstLineContainer,
   ArticleTagsContainer,
-} from "./articles-container";
+} from './articles-container';
 
 /**
- * Component for mapping each article to it's preview, with the suitable pagination/filtering based on tags select
+ * Component for mapping each article to it's preview, with the suitable pagination/filtering based on tags select.
+ *  @param {Object} props articles, currentPage, selectedTag
  * @param   {array}    articles         all articles
  * @param   {number}   currentPage      current selected page
  * @param   {string}   selectedTag      selected tag for articles to be filtered
  * @param   {function} onLike           function to like an article
  * @param   {function} handlePageChange function to change page
  */
-function ArticlesContainer(props) {
-  const { articles, currentPage, selectedTag, onLike, handlePageChange } =
-    props;
-
+function ArticlesContainer({
+  articles,
+  currentPage,
+  selectedTag,
+  onLike,
+  handlePageChange,
+}) {
   /**
    * filters articles based on tag selection, and paginates them
    * @return  {array}      paginatedArticles
@@ -54,6 +58,7 @@ function ArticlesContainer(props) {
       <Container>
         <ContentNav />
         {data.map((item) => (
+          // eslint-disable-next-line no-underscore-dangle
           <ArticlePreview key={item._id}>
             <FirstLineContainer>
               <UserContainer>
@@ -63,6 +68,7 @@ function ArticlesContainer(props) {
                   <ArticleDate>{item.publishDate}</ArticleDate>
                 </UserData>
               </UserContainer>
+              {/* eslint-disable-next-line no-underscore-dangle */}
               <LikedContainer onClick={() => onLike(item._id)}>
                 <LikedIcon />
                 <LikedCount>{item.liked}</LikedCount>
@@ -74,6 +80,7 @@ function ArticlesContainer(props) {
               <ReadMoreP>Read more...</ReadMoreP>
               <ArticleTagsContainer>
                 {item.tags.map((tag) => (
+                  // eslint-disable-next-line no-underscore-dangle
                   <ArticleTag key={tag._id}>{tag.name}</ArticleTag>
                 ))}
               </ArticleTagsContainer>
@@ -87,11 +94,11 @@ function ArticlesContainer(props) {
 }
 
 ArticlesContainer.propTypes = {
-  articles: ProbTypes.array.isRequired,
+  articles: ProbTypes.arrayOf(ProbTypes.object).isRequired,
   onLike: ProbTypes.func.isRequired,
   currentPage: ProbTypes.number.isRequired,
   handlePageChange: ProbTypes.func.isRequired,
-  selectedTag: ProbTypes.string,
+  selectedTag: ProbTypes.string.isRequired,
 };
 
 export default ArticlesContainer;

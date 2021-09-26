@@ -1,10 +1,10 @@
-import React from "react";
-import { NavBar, NavElement } from "./content-nav";
+import React from 'react';
+import { NavBar, NavElement } from './content-nav';
 
 /**
  * Component for showing the navigation bar above articles.
  */
-function index(props) {
+function index() {
   return (
     <NavBar>
       <NavElement>Global Feed</NavElement>

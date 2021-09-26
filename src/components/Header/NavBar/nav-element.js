@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { ReactComponent as menu } from "assets/menu.svg";
-import { ReactComponent as close } from "assets/close.svg";
-import { NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import { ReactComponent as menu } from 'assets/menu.svg';
+import { ReactComponent as close } from 'assets/close.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Element = styled.li`
   display: inline;

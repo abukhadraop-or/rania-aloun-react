@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "./nav-bar";
+import React, { useEffect, useState } from 'react';
+import NavBar from './nav-bar';
 import {
   Element,
   MenuElement,
@@ -7,12 +7,12 @@ import {
   CloseButton,
   CloseElement,
   StyledNavLink,
-} from "./nav-element";
+} from './nav-element';
 
 /**
  * Responsive component for the navigation bar in the header of the page.
  */
-function Nav(props) {
+function Nav() {
   const [clicked, setClicked] = useState(true);
 
   /**

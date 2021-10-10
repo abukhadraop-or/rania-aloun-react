@@ -9,6 +9,9 @@ export const Container = styled.div`
     display: block;
     margin: 0 0.5rem;
   }
+  @media (max-width: 430px) {
+    margin: 0 0.5rem;
+  }
 `;
 
 export const InnerContainer = styled.div`

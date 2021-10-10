@@ -6,17 +6,18 @@ import axios from 'axios';
 import DisplayArticles from 'utilities/displayArticles';
 import { Container, InnerContainer } from './page-content';
 
+console.log('--------');
 function PageContent() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTag, setSelectedTag] = useState('allArticles');
-
+  const getArticles = async () => {
+    let response = await axios.get('http://localhost:3600/getArticles');
+    response = response.data;
+    console.log(response);
+    setArticles(response);
+  };
   useEffect(() => {
-    async function getArticles() {
-      let response = await axios.get('http://localhost:3600/getArticles');
-      response = response.data;
-      setArticles(response);
-    }
     getArticles();
   }, []);
 
@@ -25,6 +26,7 @@ function PageContent() {
   };
 
   const handleTagSelect = (tag) => {
+    setCurrentPage(1);
     setSelectedTag(tag);
   };
 

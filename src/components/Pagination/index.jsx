@@ -16,7 +16,6 @@ import {
  * @return {JSX.Element} Pages numbers in a component at the bottom of the page.
  */
 function Pagination({ itemsCount, onPageChange }) {
-  // const [isNeeded, setIsNeeded] = useState(true);
   let isNeeded = true;
   const paginate = () => {
     const pageSize = 3;

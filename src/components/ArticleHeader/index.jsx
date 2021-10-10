@@ -29,7 +29,6 @@ function ArticleHeader({ article }) {
   };
 
   const handleLike = async () => {
-    setLike(!isLiked);
     if (!isLiked) {
       setCount(count + 1);
       updateLikes(count + 1);
@@ -37,7 +36,9 @@ function ArticleHeader({ article }) {
       setCount(count - 1);
       updateLikes(count - 1);
     }
+    setLike(!isLiked);
   };
+
   return (
     <Container>
       <UserData article={article} />

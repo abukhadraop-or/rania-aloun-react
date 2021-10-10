@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavBar = styled.ul`
   background-color: white;
   color: #98a69b;
-  font-size: 15px;
+  font-size: 0.938rem;
   list-style-type: none;
   margin: 0 0 0.53rem;
   padding: 0;

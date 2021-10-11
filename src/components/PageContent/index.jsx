@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
-import getArticles from 'services/articles';
+import getArticles from 'services/get-articles';
 import DisplayArticles from 'utilities/displayArticles';
 import { Container, InnerContainer } from './page-content';
 
@@ -11,10 +11,10 @@ function PageContent() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTag, setSelectedTag] = useState('allArticles');
 
-  async function fetchArticles() {
+  const fetchArticles = async () => {
     const { data } = await getArticles();
     setArticles(data);
-  }
+  };
 
   useEffect(() => {
     fetchArticles();

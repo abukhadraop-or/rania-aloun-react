@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import getTags from 'services/get-tags';
 import ProbTypes from 'prop-types';
 import { Tag, TagButton, TagsHeader, TagsContainer, Container } from './tags';
 
@@ -14,13 +14,13 @@ import { Tag, TagButton, TagsHeader, TagsContainer, Container } from './tags';
 function Tags({ onTagSelect }) {
   const [tags, setTags] = useState([]);
 
+  const fetchTags = async () => {
+    const { data } = await getTags();
+    setTags(data);
+  };
+
   useEffect(() => {
-    async function getTags() {
-      let response = await axios.get('http://localhost:3600/getTags');
-      response = response.data;
-      setTags(response);
-    }
-    getTags();
+    fetchTags();
   }, []);
 
   return (

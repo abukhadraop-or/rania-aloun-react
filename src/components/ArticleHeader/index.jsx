@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import UserData from 'components/UserData';
-import axios from 'axios';
+import updateLikesService from 'services/update-likes';
 import {
   Container,
   LikeButtonContainer,
@@ -23,9 +23,7 @@ function ArticleHeader({ article }) {
   const [count, setCount] = useState(article.liked);
 
   const updateLikes = async (updatedCount) => {
-    await axios.put(`http://localhost:3600/updateArticleLikes/${article.id}`, {
-      passed: updatedCount,
-    });
+    await updateLikesService(article.id, updatedCount);
   };
 
   const handleLike = async () => {

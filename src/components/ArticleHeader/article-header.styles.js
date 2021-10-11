@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as heart } from 'assets/heart.svg';
 import { ReactComponent as emptyHeart } from 'assets/empty-heart.svg';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const ArticleDate = styled.p`
-  color: #bbbbbb;
+  color: ${colors.smokeyGrey};
   font-size: 0.8rem;
   margin: 0;
 `;
@@ -16,7 +17,7 @@ export const ArticleDate = styled.p`
 export const LikeButtonContainer = styled.button`
   background-color: transparent;
   border-radius: 0.125rem;
-  border: 0.063rem solid #5cb85c;
+  border: 0.063rem solid ${colors.boringGreen};
   cursor: pointer;
   display: flex;
   height: fit-content;
@@ -24,16 +25,16 @@ export const LikeButtonContainer = styled.button`
 `;
 
 export const LikeIcon = styled(heart)`
-  fill: #5cb85c;
+  fill: ${colors.boringGreen};
   width: 0.8rem;
 `;
 
 export const UnLikeIcon = styled(emptyHeart)`
   width: 0.8rem;
-  fill: #5cb85c;
+  fill: ${colors.boringGreen};
 `;
 
 export const LikesCount = styled.p`
-  color: #5cb85c;
+  color: ${colors.boringGreen};
   margin: 0 0 0 0.125rem;
 `;

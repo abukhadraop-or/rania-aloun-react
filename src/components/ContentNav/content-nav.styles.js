@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import colors from 'styles/colors';
 
 export const NavBar = styled.ul`
   background-color: white;
-  color: #98a69b;
+  color: ${colors.coolGrey};
   font-size: 0.938rem;
   list-style-type: none;
   margin: 0 0 0.53rem;
@@ -10,11 +11,11 @@ export const NavBar = styled.ul`
 `;
 
 export const NavElement = styled.li`
-  border-bottom: 0.13rem solid #5cb85c;
-  color: #5cb85c;
+  border-bottom: 0.13rem solid ${colors.boringGreen};
+  color: ${colors.boringGreen};
   cursor: pointer;
   display: inline;
-  margin: 0 10px 0;
+  margin: 0 0.625rem 0;
   margin: 0;
   padding: 0.5rem 1rem;
 `;

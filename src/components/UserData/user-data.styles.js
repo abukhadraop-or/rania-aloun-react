@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import smile from 'assets/smile.jpg';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ export const InnerContainer = styled.div`
 `;
 
 export const UserName = styled.p`
-  color: #5cb85c;
+  color: ${colors.boringGreen};
   cursor: pointer;
   font-family: 'source sans pro', sans-serif;
   font-size: 1rem;
@@ -31,7 +32,7 @@ export const UserName = styled.p`
 `;
 
 export const PublishDate = styled.p`
-  color: #bbbbbb;
+  color: ${colors.ashGrey};
   font-size: 0.8rem;
   margin: 0;
 `;

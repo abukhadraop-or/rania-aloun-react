@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
   margin: 0 1rem;
@@ -13,7 +14,7 @@ export const TagsHeader = styled.p`
 `;
 
 export const TagsContainer = styled.div`
-  background-color: #f3f3f3;
+  background-color: ${colors.aquaHaze};
   border-radius: 0.125rem;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +30,7 @@ export const TagButton = styled.button`
 `;
 
 export const Tag = styled.p`
-  background-color: #818a91;
+  background-color: ${colors.osloGrey};
   border-radius: 0.8rem;
   color: #fff;
   cursor: pointer;
@@ -39,6 +40,6 @@ export const Tag = styled.p`
   padding: 0.2rem;
   width: fit-content;
   &:hover {
-    background-color: #6d6f70;
+    background-color: ${colors.smokeyGrey};
   }
 `;

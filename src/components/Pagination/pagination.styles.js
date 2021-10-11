@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from 'styles/colors';
 
 export const PagesContainer = styled.nav`
   margin: 2rem 0 0;
@@ -14,14 +15,14 @@ export const PagesList = styled.ul`
 
 export const PageNumber = styled.li`
   border-radius: 0;
-  border: 0.063rem solid #bbbbbb;
-  color: #5cb85c;
+  border: 0.063rem solid ${colors.ashGrey};
+  color: ${colors.boringGreen};
   cursor: pointer;
   margin: 0 -0.063rem 0 0;
   width: fit-content;
   &:active {
     color: white;
-    background-color: #5cb85c;
+    background-color: ${colors.boringGreen};
     border: none;
   }
 `;

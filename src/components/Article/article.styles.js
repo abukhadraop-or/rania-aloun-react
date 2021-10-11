@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
-  border-top: 0.13rem solid #e6e5e3;
+  border-top: 0.13rem solid ${colors.mercury};
   padding: 1.5rem 0;
 `;
 
@@ -13,7 +14,7 @@ export const ArticleTitle = styled.p`
 `;
 
 export const ArticleLink = styled.p`
-  color: #bbbbbb;
+  color: ${colors.ashGrey};
   cursor: pointer;
   font-size: 0.8rem;
   margin: 0.2rem 0 0 0;
@@ -26,7 +27,7 @@ export const ArticleFooter = styled.div`
 `;
 
 export const ReadMoreP = styled.p`
-  color: #bbbbbb;
+  color: ${colors.ashGrey};
   cursor: pointer;
   font-size: 0.7rem;
   margin: 1rem 0;
@@ -39,8 +40,8 @@ export const ArticleTagsContainer = styled.div`
 
 export const ArticleTag = styled.p`
   border-radius: 0.8rem;
-  border: 0.063rem solid #bbbbbb;
-  color: #bbbbbb;
+  border: 0.063rem solid ${colors.ashGrey};
+  color: ${colors.ashGrey};
   cursor: pointer;
   font-size: 0.7rem;
   height: fit-content;
@@ -48,6 +49,6 @@ export const ArticleTag = styled.p`
   padding: 0.2rem;
   width: fit-content;
   &:hover {
-    border: 0.063rem solid #6d6f70;
+    border: 0.063rem solid ${colors.smokeyGrey};
   }
 `;

@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0 6rem;
-  @media (max-width: 375px) {
+  @media (max-width: 23.4375rem) {
     display: block;
     margin: 0 0.5rem;
   }
-  @media (max-width: 430px) {
+  @media (max-width: 26.875rem) {
     margin: 0 0.5rem;
   }
 `;

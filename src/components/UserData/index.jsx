@@ -6,7 +6,7 @@ import {
   InnerContainer,
   UserName,
   PublishDate,
-} from './user-data';
+} from './user-data.styles';
 
 /**
  * Component showing the publisher data in the article card header.

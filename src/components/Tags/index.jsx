@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import getTags from 'services/get-tags';
 import ProbTypes from 'prop-types';
-import { Tag, TagButton, TagsHeader, TagsContainer, Container } from './tags';
+import {
+  Tag,
+  TagButton,
+  TagsHeader,
+  TagsContainer,
+  Container,
+} from './tags.styles';
 
 /**
  * Component holding the tags in a container.
@@ -14,12 +20,11 @@ import { Tag, TagButton, TagsHeader, TagsContainer, Container } from './tags';
 function Tags({ onTagSelect }) {
   const [tags, setTags] = useState([]);
 
-  const fetchTags = async () => {
-    const { data } = await getTags();
-    setTags(data);
-  };
-
   useEffect(() => {
+    const fetchTags = async () => {
+      const { data } = await getTags();
+      setTags(data);
+    };
     fetchTags();
   }, []);
 

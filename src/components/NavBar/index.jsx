@@ -7,7 +7,7 @@ import {
   MenuButton,
   CloseButton,
   StyledNavLink,
-} from './nav-bar';
+} from './nav-bar.styles';
 
 /**
  * Responsive component holding the navigation bar in the header of the page.
@@ -32,18 +32,12 @@ function NavBar() {
 
   return (
     <>
-      {/**
-       * Menu icon only shown in mobile & if not clicked.
-       */}
       {!isClicked && (
         <MenuButton onClick={handleClick}>
           <MenuIcon />
         </MenuButton>
       )}
 
-      {/**
-       * Navbar shown in mobile only if menu icon is clicked.
-       */}
       {isClicked && (
         <Container>
           <CloseButton onClick={handleClick}>
@@ -53,10 +47,10 @@ function NavBar() {
             <StyledNavLink to="/home"> Home </StyledNavLink>
           </NavElement>
           <NavElement>
-            <StyledNavLink to="/signIn">Sign in</StyledNavLink>
+            <StyledNavLink to="/sign-in">Sign in</StyledNavLink>
           </NavElement>
           <NavElement>
-            <StyledNavLink to="/signUp">Sign up</StyledNavLink>
+            <StyledNavLink to="/sign-up">Sign up</StyledNavLink>
           </NavElement>
         </Container>
       )}

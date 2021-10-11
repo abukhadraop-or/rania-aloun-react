@@ -9,7 +9,7 @@ import {
   ArticleTitle,
   ArticleFooter,
   ArticleTagsContainer,
-} from './article';
+} from './article.styles';
 
 /**
  * Component holding the article card.

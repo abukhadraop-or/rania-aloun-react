@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Logo, StyledLink } from './header';
-import NavBar from '../NavBar';
+import NavBar from 'components/NavBar';
+import { Container, Logo, StyledLink } from './header.styles';
 
 /**
  * Component holding the header of the application.

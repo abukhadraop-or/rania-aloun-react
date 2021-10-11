@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, BannerTitle, BannerP } from './banner';
+import { Container, BannerTitle, BannerP } from './banner.styles';
 
 /**
  * Component showing the Banner in the home page.

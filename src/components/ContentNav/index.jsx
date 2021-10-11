@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, NavElement } from './content-nav';
+import { NavBar, NavElement } from './content-nav.styles';
 
 /**
  * Component holding the navigation bar on top of articles.

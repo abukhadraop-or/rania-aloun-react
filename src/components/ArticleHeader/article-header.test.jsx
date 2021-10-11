@@ -2,7 +2,11 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import ArticleHeader from '.';
-import { LikeButtonContainer, LikeIcon, UnLikeIcon } from './article-header';
+import {
+  LikeButtonContainer,
+  LikeIcon,
+  UnLikeIcon,
+} from './article-header.styles';
 
 Enzyme.configure({ adapter: new Adapter() });
 

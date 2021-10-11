@@ -8,7 +8,7 @@ import {
   LikeIcon,
   UnLikeIcon,
   LikesCount,
-} from './article-header';
+} from './article-header.styles';
 
 /**
  * Component holding the article card header.

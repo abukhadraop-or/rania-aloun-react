@@ -4,19 +4,18 @@ import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
 import getArticles from 'services/get-articles';
 import DisplayArticles from 'utilities/displayArticles';
-import { Container, InnerContainer } from './page-content';
+import { Container, InnerContainer } from './page-content.styles';
 
 function PageContent() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTag, setSelectedTag] = useState('allArticles');
 
-  const fetchArticles = async () => {
-    const { data } = await getArticles();
-    setArticles(data);
-  };
-
   useEffect(() => {
+    const fetchArticles = async () => {
+      const { data } = await getArticles();
+      setArticles(data);
+    };
     fetchArticles();
   }, []);
 

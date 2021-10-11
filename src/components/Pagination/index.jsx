@@ -6,7 +6,7 @@ import {
   PagesList,
   PageNumber,
   PageButton,
-} from './pagination';
+} from './pagination.styles';
 
 /**
  * Pagination component for showing number of pages at the bottom of the page.

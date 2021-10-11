@@ -2,23 +2,22 @@ import React, { useEffect, useState } from 'react';
 import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
-import axios from 'axios';
+import getArticles from 'services/articles';
 import DisplayArticles from 'utilities/displayArticles';
 import { Container, InnerContainer } from './page-content';
 
-console.log('--------');
 function PageContent() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTag, setSelectedTag] = useState('allArticles');
-  const getArticles = async () => {
-    let response = await axios.get('http://localhost:3600/getArticles');
-    response = response.data;
-    console.log(response);
-    setArticles(response);
-  };
+
+  async function fetchArticles() {
+    const { data } = await getArticles();
+    setArticles(data);
+  }
+
   useEffect(() => {
-    getArticles();
+    fetchArticles();
   }, []);
 
   const handlePageChange = (page) => {
@@ -29,7 +28,6 @@ function PageContent() {
     setCurrentPage(1);
     setSelectedTag(tag);
   };
-
   const { totalCount } = DisplayArticles(articles, selectedTag, currentPage);
 
   return (

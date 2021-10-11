@@ -1,5 +1,5 @@
-import filter from './filterArticles';
-import paginate from './sliceArticles';
+import filter from './filter-articles';
+import paginate from './slice-articles';
 
 /**
  * Function filters and paginates the articles based on tag and page selection.

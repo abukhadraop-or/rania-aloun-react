@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentNav from 'components/ContentNav';
-import DisplayArticles from 'utilities/displayArticles';
+import DisplayArticles from 'utilities/display-articles';
 import PropType from 'prop-types';
 import Article from 'components/Article';
 

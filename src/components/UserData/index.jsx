@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import smile from 'assets/smile.jpg';
 import {
-  Container,
   UserImg,
-  InnerContainer,
   UserName,
+  Container,
   PublishDate,
+  InnerContainer,
 } from './user-data.styles';
 
 /**
@@ -18,7 +19,7 @@ import {
 function UserData({ article }) {
   return (
     <Container>
-      <UserImg />
+      <UserImg src={smile} />
       <InnerContainer>
         <UserName>{article.userName}</UserName>
         <PublishDate>{article.publishDate}</PublishDate>

@@ -3,7 +3,7 @@ import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
 import getArticles from 'services/get-articles';
-import DisplayArticles from 'utilities/displayArticles';
+import DisplayArticles from 'utilities/display-articles';
 import { Container, InnerContainer } from './page-content.styles';
 
 function PageContent() {

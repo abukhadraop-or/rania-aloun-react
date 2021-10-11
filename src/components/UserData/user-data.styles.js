@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import smile from 'assets/smile.jpg';
 import colors from 'styles/colors';
 
 export const Container = styled.div`
@@ -7,12 +6,20 @@ export const Container = styled.div`
   width: fit-content;
 `;
 
-export const UserImg = styled.div`
-  background-image: url(${smile});
-  background-size: contain;
+// export const UserImg = styled.div`
+//   background-image: url(${smile});
+//   background-size: contain;
+//   border-radius: 50%;
+//   height: 2rem;
+//   width: 2rem;
+//   /* @media (max-width: 16.25rem) {
+//     border-radius: 50px;
+//   } */
+// `;
+
+export const UserImg = styled.img`
   border-radius: 50%;
   height: 2rem;
-  width: 2rem;
 `;
 
 export const InnerContainer = styled.div`

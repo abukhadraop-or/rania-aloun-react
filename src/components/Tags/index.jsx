@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import getTags from 'services/get-tags';
+import getTags from 'services/tags-service';
 import ProbTypes from 'prop-types';
 import {
   Tag,
@@ -12,7 +12,7 @@ import {
 /**
  * Component holding the tags in a container.
  *
- * @param {object}   props Props passed to Tags component.
+ * @param {Object}   props Props passed to Tags component.
  * @param {function} props.onTagSelect Changes previewed articles based on tag selection.
  *
  * @return {JSX.Element} Container holding all the tags of the articles.

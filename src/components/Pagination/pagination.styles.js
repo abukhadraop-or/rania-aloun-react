@@ -20,6 +20,7 @@ export const PageNumber = styled.li`
   cursor: pointer;
   margin: 0 -0.063rem 0 0;
   width: fit-content;
+
   &:active {
     color: white;
     background-color: ${colors.boringGreen};

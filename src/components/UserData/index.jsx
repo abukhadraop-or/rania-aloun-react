@@ -14,25 +14,24 @@ import {
  *
  * @param {Object} props Props passed to UserData Container.
  * @param {Object[]} article Passed article array holding it's publisher data.
+ *
  * @return {JSX.Element} Container holding the passed article's publisher data.
  */
-function UserData({ article }) {
+function UserData({ userName, publishDate }) {
   return (
     <Container>
       <UserImg src={smile} />
       <InnerContainer>
-        <UserName>{article.userName}</UserName>
-        <PublishDate>{article.publishDate}</PublishDate>
+        <UserName>{userName}</UserName>
+        <PublishDate>{publishDate}</PublishDate>
       </InnerContainer>
     </Container>
   );
 }
 
 UserData.propTypes = {
-  article: PropTypes.shape({
-    userName: PropTypes.string,
-    publishDate: PropTypes.string,
-  }).isRequired,
+  userName: PropTypes.string.isRequired,
+  publishDate: PropTypes.string.isRequired,
 };
 
 export default UserData;

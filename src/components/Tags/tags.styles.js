@@ -39,6 +39,7 @@ export const Tag = styled.p`
   margin: 0.125rem;
   padding: 0.2rem;
   width: fit-content;
+
   &:hover {
     background-color: ${colors.smokeyGrey};
   }

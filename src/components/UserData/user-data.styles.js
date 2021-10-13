@@ -6,17 +6,6 @@ export const Container = styled.div`
   width: fit-content;
 `;
 
-// export const UserImg = styled.div`
-//   background-image: url(${smile});
-//   background-size: contain;
-//   border-radius: 50%;
-//   height: 2rem;
-//   width: 2rem;
-//   /* @media (max-width: 16.25rem) {
-//     border-radius: 50px;
-//   } */
-// `;
-
 export const UserImg = styled.img`
   border-radius: 50%;
   height: 2rem;
@@ -33,6 +22,7 @@ export const UserName = styled.p`
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
+
   &:hover {
     text-decoration: underline;
   }

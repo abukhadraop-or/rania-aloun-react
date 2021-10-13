@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
+import breakpoints from 'styles/break-points';
 
 export const Container = styled.div`
   align-items: center;
@@ -17,18 +18,20 @@ export const BannerTitle = styled.p`
   font-size: 3.5rem;
   margin: 0;
   text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.8);
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     font-size: 3rem;
   }
 `;
 
-export const BannerP = styled.p`
+export const BannerText = styled.p`
   color: white;
   font-family: 'source sans pro', sans-serif;
   font-size: 1.5rem;
   margin: 0;
   text-align: center;
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     font-size: 1.2rem;
   }
 `;

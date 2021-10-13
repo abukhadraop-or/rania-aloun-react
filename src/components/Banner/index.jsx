@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, BannerTitle, BannerP } from './banner.styles';
+import { Container, BannerTitle, BannerText } from './banner.styles';
 
 /**
  * Component showing the Banner in the home page.
@@ -10,7 +10,7 @@ function index() {
   return (
     <Container>
       <BannerTitle>conduit</BannerTitle>
-      <BannerP>A place to share your knowledge.</BannerP>
+      <BannerText>A place to share your knowledge.</BannerText>
     </Container>
   );
 }

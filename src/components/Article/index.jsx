@@ -3,9 +3,9 @@ import PropType from 'prop-types';
 import ArticleHeader from 'components/ArticleHeader';
 import {
   Container,
-  ReadMoreP,
   ArticleTag,
   ArticleLink,
+  ReadMoreText,
   ArticleTitle,
   ArticleFooter,
   ArticleTagsContainer,
@@ -14,18 +14,24 @@ import {
 /**
  * Component holding the article card.
  *
- * @param {object} props Passed props to Article function.
- * @param {object[]} data Passed article.
+ * @param {Object} props Passed props to Article function.
+ * @param {Object[]} data Passed article.
+ *
  * @return {JSX.Element} Article card holding all the article's data.
  */
 function Article({ data }) {
   return (
     <Container>
-      <ArticleHeader article={data} />
+      <ArticleHeader
+        id={data.id}
+        liked={data.liked}
+        userName={data.userName}
+        publishDate={data.publishDate}
+      />
       <ArticleTitle>{data.articleTitle}</ArticleTitle>
       <ArticleLink>{data.link}</ArticleLink>
       <ArticleFooter>
-        <ReadMoreP>Read more...</ReadMoreP>
+        <ReadMoreText>Read more...</ReadMoreText>
         <ArticleTagsContainer>
           {data.tags.map((tag) => (
             <ArticleTag key={tag.id}>{tag.name}</ArticleTag>
@@ -40,11 +46,14 @@ Article.propTypes = {
   data: PropType.shape({
     articleTitle: PropType.string,
     link: PropType.string,
+    id: PropType.number,
+    liked: PropType.number,
+    userName: PropType.string,
+    publishDate: PropType.string,
     tags: PropType.arrayOf(
       PropType.shape({
         id: PropType.number,
         name: PropType.string,
-        map: PropType.func,
       })
     ).isRequired,
   }).isRequired,

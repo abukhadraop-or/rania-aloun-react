@@ -6,7 +6,7 @@ import { NavBar, NavElement } from './content-nav.styles';
  *
  * @return {JSX.Element} Navigation bar holding the global feed.
  */
-function index() {
+function ContentNav() {
   return (
     <NavBar>
       <NavElement>Global Feed</NavElement>
@@ -14,4 +14,4 @@ function index() {
   );
 }
 
-export default index;
+export default ContentNav;

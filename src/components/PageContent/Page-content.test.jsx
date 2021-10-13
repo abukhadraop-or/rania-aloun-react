@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { act } from '@testing-library/react';
-import getArticles from 'services/get-articles';
+import getArticles from 'services/articles-service';
 import Articles from 'components/Articles';
 import PageContent from '.';
 

@@ -26,7 +26,7 @@ export const ArticleFooter = styled.div`
   margin: 1rem 0 0 0;
 `;
 
-export const ReadMoreP = styled.p`
+export const ReadMoreText = styled.p`
   color: ${colors.ashGrey};
   cursor: pointer;
   font-size: 0.7rem;
@@ -48,6 +48,7 @@ export const ArticleTag = styled.p`
   margin: 0.125rem;
   padding: 0.2rem;
   width: fit-content;
+
   &:hover {
     border: 0.063rem solid ${colors.smokeyGrey};
   }

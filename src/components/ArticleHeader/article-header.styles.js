@@ -37,6 +37,7 @@ export const LikeButtonContainer = styled.button`
   display: flex;
   height: fit-content;
   padding: 0.2rem 0.5rem;
+
   :hover {
     background-color: ${colors.boringGreen};
   }

@@ -3,6 +3,7 @@ import { ReactComponent as menu } from 'assets/menu.svg';
 import { ReactComponent as close } from 'assets/close.svg';
 import { NavLink } from 'react-router-dom';
 import colors from 'styles/colors';
+import breakpoints from 'styles/break-points';
 
 export const Container = styled.ul`
   align-items: center;
@@ -13,7 +14,8 @@ export const Container = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8);
     flex-direction: column;
     position: absolute;
@@ -27,10 +29,12 @@ export const NavElement = styled.li`
   cursor: pointer;
   display: inline;
   margin: 0 0.625rem 0;
+
   &:hover {
     color: ${colors.shuttleGrey};
   }
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     display: flex;
     flex-direction: column;
     margin: 0 0.5rem 1rem;
@@ -43,7 +47,8 @@ export const CloseButton = styled.button`
   cursor: pointer;
   display: none;
   margin: 0 0.5rem 1.5rem;
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     display: block;
   }
 `;
@@ -51,7 +56,8 @@ export const CloseButton = styled.button`
 export const CloseIcon = styled(close)`
   display: none;
   margin: 0.4rem 0;
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     align-items: center;
     display: block;
   }
@@ -62,7 +68,8 @@ export const MenuButton = styled.button`
   border: none;
   cursor: pointer;
   display: none;
-  @media (max-width: 23.4375rem) {
+
+  @media (max-width: ${breakpoints.mobile}) {
     display: block;
   }
 `;

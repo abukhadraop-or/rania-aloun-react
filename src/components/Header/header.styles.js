@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import colors from 'styles/colors';
+import breakpoints from 'styles/break-points';
 
 export const Container = styled.header`
   align-items: center;
@@ -13,7 +14,8 @@ export const Container = styled.header`
   position: sticky;
   top: 0;
   background-color: white;
-  @media (max-width: 31.25rem) {
+
+  @media (max-width: ${breakpoints.tablet}) {
     padding: 0 3.125rem 0;
   }
 `;

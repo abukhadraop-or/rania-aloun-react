@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
-import getArticles from 'services/get-articles';
+import getArticles from 'services/articles-service';
 import DisplayArticles from 'utilities/display-articles';
 import { Container, InnerContainer } from './page-content.styles';
 
+/**
+ * Component holding the page content in the home page, it handles pageChange and TagsSelect.
+ *
+ * @return {JSX.Element} Container holding Tags and Articles and pages numbers.
+ */
 function PageContent() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

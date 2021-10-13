@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import UserData from 'components/UserData';
 import updateLikesService from 'services/update-likes';
 import {
-  Container,
-  LikeButtonContainer,
   LikeIcon,
+  Container,
   UnLikeIcon,
   LikesCount,
+  LikeButtonContainer,
 } from './article-header.styles';
 
 /**
@@ -16,33 +16,25 @@ import {
  * @param {Object} props Props passed to ArticleHeader Container.
  * @param {Object[]} article Passed article array holding it's publisher data with the likes of the article.
  * @param {func} onLike Sends the clicked article's id to the likes handler.
+ *
  * @return {JSX.Element} Container holding the article header, publisher data and likes.
  */
-function ArticleHeader({ article }) {
+function ArticleHeader({ id, liked, userName, publishDate }) {
   const [isLiked, setLike] = useState(false);
-  const [count, setCount] = useState(article.liked);
-
-  const updateLikes = async (updatedCount) => {
-    await updateLikesService(article.id, updatedCount);
-  };
+  const [count, setCount] = useState(liked);
 
   const handleLike = async () => {
-    if (!isLiked) {
-      setCount(count + 1);
-      updateLikes(count + 1);
-    } else {
-      setCount(count - 1);
-      updateLikes(count - 1);
-    }
+    const trigger = isLiked ? -1 : 1;
+    await updateLikesService(id, count + trigger);
+    setCount(count + trigger);
     setLike(!isLiked);
   };
 
   return (
     <Container>
-      <UserData article={article} />
-      <LikeButtonContainer onClick={() => handleLike()}>
-        {isLiked && <LikeIcon />}
-        {!isLiked && <UnLikeIcon />}
+      <UserData userName={userName} publishDate={publishDate} />
+      <LikeButtonContainer onClick={handleLike}>
+        {isLiked ? <LikeIcon /> : <UnLikeIcon />}
         <LikesCount>{count}</LikesCount>
       </LikeButtonContainer>
     </Container>
@@ -50,9 +42,9 @@ function ArticleHeader({ article }) {
 }
 
 ArticleHeader.propTypes = {
-  article: PropTypes.shape({
-    id: PropTypes.number,
-    liked: PropTypes.number,
-  }).isRequired,
+  id: PropTypes.number.isRequired,
+  liked: PropTypes.number.isRequired,
+  userName: PropTypes.string.isRequired,
+  publishDate: PropTypes.string.isRequired,
 };
 export default ArticleHeader;

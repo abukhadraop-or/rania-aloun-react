@@ -1,15 +1,17 @@
 import styled from 'styled-components';
+import breakpoints from 'styles/break-points';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0 6rem;
-  @media (max-width: 42.5rem) {
-    display: block;
+
+  @media (max-width: ${breakpoints.tablet}) {
     margin: 0 0.5rem;
   }
-  @media (max-width: 26.875rem) {
+  @media (max-width: ${breakpoints.tabletWide}) {
+    display: block;
     margin: 0 0.5rem;
   }
 `;

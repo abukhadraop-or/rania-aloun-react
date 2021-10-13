@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import getTags from 'services/get-tags';
+import getTags from 'services/tags-service';
 import { act } from '@testing-library/react';
 import Tags from '.';
 import { Tag } from './tags.styles';

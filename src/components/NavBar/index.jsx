@@ -18,7 +18,7 @@ function NavBar() {
   const [isClicked, setClicked] = useState(true);
 
   /**
-   * Flips the clicked state to show the navbar or hide it.
+   * Toggles the clicked state to show the navbar or hide it.
    */
   const handleClick = () => {
     setClicked(!isClicked);

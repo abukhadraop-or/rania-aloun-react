@@ -24,6 +24,11 @@ export const LikeIcon = styled(heart)`
   width: 0.8rem;
 `;
 
+export const UnLikeIcon = styled(emptyHeart)`
+  width: 0.8rem;
+  fill: ${colors.boringGreen};
+`;
+
 export const LikeButtonContainer = styled.button`
   background-color: transparent;
   border-radius: 0.125rem;
@@ -41,9 +46,7 @@ export const LikeButtonContainer = styled.button`
   :hover ${LikeIcon} {
     fill: white;
   }
-`;
-
-export const UnLikeIcon = styled(emptyHeart)`
-  width: 0.8rem;
-  fill: ${colors.boringGreen};
+  :hover ${UnLikeIcon} {
+    fill: white;
+  }
 `;

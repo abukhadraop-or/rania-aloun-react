@@ -33,8 +33,8 @@ function Tags({ onTagSelect }) {
       <TagsContainer>
         <TagsHeader>Popular Tags</TagsHeader>
         {tags.map((item) => (
-          <TagButton key={item.id}>
-            <Tag onClick={() => onTagSelect(item.name)}>{item.name}</Tag>
+          <TagButton key={item.id} onClick={() => onTagSelect(item.name)}>
+            <Tag>{item.name}</Tag>
           </TagButton>
         ))}
       </TagsContainer>

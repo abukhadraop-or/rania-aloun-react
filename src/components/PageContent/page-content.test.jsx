@@ -9,6 +9,7 @@ import PageContent from '.';
 Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('services/get-articles', () => jest.fn());
+
 const mockedData = {
   data: [
     {
@@ -38,8 +39,8 @@ const mockedData = {
   ],
 };
 
-describe('all', () => {
-  it('lala', async () => {
+describe('<PageContent />', () => {
+  it('sets fetched data to articles', async () => {
     const promise = Promise.resolve();
     getArticles.mockReturnValue(mockedData);
     const wrapper = mount(<PageContent />);

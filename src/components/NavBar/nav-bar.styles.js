@@ -16,12 +16,13 @@ export const Container = styled.ul`
   padding: 0;
 
   @media (max-width: ${breakpoints.mobile}) {
-    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8);
+    /* box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8); */
     flex-direction: column;
+    display: ${({ display }) => (display ? 'static' : 'none')};
     position: absolute;
-    right: 2.2rem;
-    top: 0.6rem;
-    width: fit-content;
+    top: 3.5rem;
+    width: 100%;
+    right: 0;
   }
 `;
 
@@ -37,19 +38,9 @@ export const NavElement = styled.li`
   @media (max-width: ${breakpoints.mobile}) {
     display: flex;
     flex-direction: column;
-    margin: 0 0.5rem 1rem;
-  }
-`;
-
-export const CloseButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
-  margin: 0 0.5rem 1.5rem;
-
-  @media (max-width: ${breakpoints.mobile}) {
-    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid ${colors.ashGrey};
+    margin: 0;
   }
 `;
 

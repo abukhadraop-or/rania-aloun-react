@@ -3,10 +3,10 @@ import Enzyme, { shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import ArticleHeader from '.';
 import {
-  LikeButtonContainer,
   LikeIcon,
   LikesCount,
   UnLikeIcon,
+  LikeButtonContainer,
 } from './article-header.styles';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -15,7 +15,10 @@ describe('<ArticleHeader />', () => {
   const wrapper = shallow(
     <ArticleHeader
       article={{
+        id: 1,
         liked: 5,
+        userName: 'Rania',
+        publishDate: '2021-05-08T21:00:00.000Z',
       }}
     />
   );

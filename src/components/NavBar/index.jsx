@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   MenuIcon,
   Container,
   CloseIcon,
   NavElement,
   MenuButton,
-  CloseButton,
   StyledNavLink,
 } from './nav-bar.styles';
 
@@ -15,7 +14,7 @@ import {
  * @return {JSX.Element} Navigation bar holding home, sign in, and sign up routes.
  */
 function NavBar() {
-  const [isClicked, setClicked] = useState(true);
+  const [isClicked, setClicked] = useState(false);
 
   /**
    * Toggles the clicked state to show the navbar or hide it.
@@ -24,35 +23,28 @@ function NavBar() {
     setClicked(!isClicked);
   };
 
-  useEffect(() => {
-    if (window.screen.width <= 375) {
-      setClicked(false);
-    }
-  }, []);
-
   return (
     <>
+      {isClicked && (
+        <MenuButton onClick={handleClick}>
+          <CloseIcon />
+        </MenuButton>
+      )}
+      <Container display={isClicked}>
+        <NavElement>
+          <StyledNavLink to="/home"> Home </StyledNavLink>
+        </NavElement>
+        <NavElement>
+          <StyledNavLink to="/sign-in">Sign in</StyledNavLink>
+        </NavElement>
+        <NavElement>
+          <StyledNavLink to="/sign-up">Sign up</StyledNavLink>
+        </NavElement>
+      </Container>
       {!isClicked && (
         <MenuButton onClick={handleClick}>
           <MenuIcon />
         </MenuButton>
-      )}
-
-      {isClicked && (
-        <Container>
-          <CloseButton onClick={handleClick}>
-            <CloseIcon />
-          </CloseButton>
-          <NavElement>
-            <StyledNavLink to="/home"> Home </StyledNavLink>
-          </NavElement>
-          <NavElement>
-            <StyledNavLink to="/sign-in">Sign in</StyledNavLink>
-          </NavElement>
-          <NavElement>
-            <StyledNavLink to="/sign-up">Sign up</StyledNavLink>
-          </NavElement>
-        </Container>
       )}
     </>
   );

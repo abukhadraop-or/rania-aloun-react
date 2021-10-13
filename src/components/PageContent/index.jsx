@@ -27,6 +27,7 @@ function PageContent() {
     setCurrentPage(1);
     setSelectedTag(tag);
   };
+
   const { totalCount } = DisplayArticles(articles, selectedTag, currentPage);
 
   return (

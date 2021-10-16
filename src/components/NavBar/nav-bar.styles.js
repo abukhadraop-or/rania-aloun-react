@@ -13,12 +13,11 @@ export const Container = styled.ul`
   font-size: 0.9375rem;
   list-style-type: none;
   margin: 0;
-  padding: 0;
 
   @media (max-width: ${breakpoints.mobile}) {
-    /* box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8); */
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.8);
     flex-direction: column;
-    display: ${({ display }) => (display ? 'static' : 'none')};
+    display: ${({ isClicked }) => (isClicked ? 'static' : 'none')};
     position: absolute;
     top: 3.5rem;
     width: 100%;
@@ -29,18 +28,20 @@ export const Container = styled.ul`
 export const NavElement = styled.li`
   cursor: pointer;
   display: inline;
-  margin: 0 0.625rem 0;
+  margin: 0 10px 0;
 
   &:hover {
     color: ${colors.shuttleGrey};
   }
 
   @media (max-width: ${breakpoints.mobile}) {
+    border-top: 1px solid ${colors.ashGrey};
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid ${colors.ashGrey};
+    padding: 0.5rem 0;
+    right: 0;
     margin: 0;
+    width: 100%;
   }
 `;
 

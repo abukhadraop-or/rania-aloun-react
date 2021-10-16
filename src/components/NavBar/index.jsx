@@ -16,9 +16,6 @@ import {
 function NavBar() {
   const [isClicked, setClicked] = useState(false);
 
-  /**
-   * Toggles the clicked state to show the navbar or hide it.
-   */
   const handleClick = () => {
     setClicked(!isClicked);
   };
@@ -30,7 +27,7 @@ function NavBar() {
           <CloseIcon />
         </MenuButton>
       )}
-      <Container display={isClicked}>
+      <Container isClicked={isClicked}>
         <NavElement>
           <StyledNavLink to="/home"> Home </StyledNavLink>
         </NavElement>

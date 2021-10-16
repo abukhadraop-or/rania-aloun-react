@@ -3,7 +3,7 @@ import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
 import getArticles from 'services/articles-service';
-import DisplayArticles from 'utilities/display-articles';
+import config from 'config.json';
 import { Container, InnerContainer } from './page-content.styles';
 
 /**
@@ -13,27 +13,26 @@ import { Container, InnerContainer } from './page-content.styles';
  */
 function PageContent() {
   const [articles, setArticles] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const [selectedTag, setSelectedTag] = useState('allArticles');
+  const [totalArticles, setTotalArticles] = useState(0);
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const { data } = await getArticles();
-      setArticles(data);
+      const { data } = await getArticles(currentPage, config.pageSize);
+      setArticles(data.articles);
+      setTotalArticles(data.totalItems);
     };
     fetchArticles();
-  }, []);
+  }, [currentPage]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
   const handleTagSelect = (tag) => {
-    setCurrentPage(1);
     setSelectedTag(tag);
   };
-
-  const { totalCount } = DisplayArticles(articles, selectedTag, currentPage);
 
   return (
     <Container>
@@ -44,7 +43,10 @@ function PageContent() {
           selectedTag={selectedTag}
           currentPage={currentPage}
         />
-        <Pagination itemsCount={totalCount} onPageChange={handlePageChange} />
+        <Pagination
+          totalArticles={totalArticles}
+          onPageChange={handlePageChange}
+        />
       </InnerContainer>
     </Container>
   );

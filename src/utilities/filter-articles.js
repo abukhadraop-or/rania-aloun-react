@@ -4,9 +4,9 @@
  * @return {array} Array of filtered articles.
  */
 export default (items, selectedTag) => {
-  const filtered = items.filter((item) =>
+  const filteredArticles = items.filter((item) =>
     item.tags.find((tag) => tag.name === selectedTag)
   );
 
-  return filtered;
+  return filteredArticles;
 };

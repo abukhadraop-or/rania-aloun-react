@@ -1,3 +1,4 @@
 {
-  "apiEndpoint": "http://localhost:3600/"
+  "apiEndpoint": "http://localhost:3600/",
+  "pageSize": 3
 }

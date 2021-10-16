@@ -8,4 +8,4 @@ import http from './http-service';
  */
 export const getAllTags = () => http.get(`${config.apiEndpoint}getTags`);
 
-export default getAllTags;
+export default { getAllTags };

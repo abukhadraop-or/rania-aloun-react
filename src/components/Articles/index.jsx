@@ -1,8 +1,8 @@
 import React from 'react';
 import ContentNav from 'components/ContentNav';
-import displayArticles from 'utilities/display-articles';
 import PropType from 'prop-types';
 import Article from 'components/Article';
+import filterArticles from 'utilities/filter-articles';
 
 /**
  * Component holding the NavBar on top of articles, it maps all articles to their containers.
@@ -14,8 +14,9 @@ import Article from 'components/Article';
  *
  * @return {JSX.Element} Container holding the Articles container in the home page.
  */
-function Articles({ articles, selectedTag, currentPage }) {
-  const { data } = displayArticles(articles, selectedTag, currentPage);
+function Articles({ articles, selectedTag }) {
+  const filteredArticles = filterArticles(articles, selectedTag);
+  const data = selectedTag === 'allArticles' ? articles : filteredArticles;
 
   return (
     <>
@@ -34,7 +35,6 @@ Articles.propTypes = {
     })
   ).isRequired,
   selectedTag: PropType.string.isRequired,
-  currentPage: PropType.number.isRequired,
 };
 
 export default Articles;

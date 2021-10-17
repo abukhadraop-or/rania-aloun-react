@@ -3,10 +3,10 @@ import _ from 'lodash';
 import ProbTypes from 'prop-types';
 import config from 'config.json';
 import {
-  PagesContainer,
   PagesList,
   PageNumber,
   PageButton,
+  PagesContainer,
 } from './pagination.styles';
 
 /**

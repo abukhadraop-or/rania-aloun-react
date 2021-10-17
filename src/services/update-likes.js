@@ -1,9 +1,12 @@
 import config from 'config.json';
 import http from './http-service';
 
-const updateLikesEndPoint = `${config.apiEndpoint}updateArticleLikes`;
-
+/**
+ * Service that updates article likes count.
+ *
+ * @return {Promise} A promise.
+ */
 export default (articleId, updatedCount) =>
-  http.put(`${updateLikesEndPoint}/${articleId}`, {
+  http.put(`${config.apiEndpoint}articles/${articleId}`, {
     passed: updatedCount,
   });

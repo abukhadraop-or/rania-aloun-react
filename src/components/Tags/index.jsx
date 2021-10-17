@@ -4,9 +4,9 @@ import ProbTypes from 'prop-types';
 import {
   Tag,
   TagButton,
+  Container,
   TagsHeader,
   TagsContainer,
-  Container,
 } from './tags.styles';
 
 /**
@@ -32,6 +32,9 @@ function Tags({ onTagSelect }) {
     <Container>
       <TagsContainer>
         <TagsHeader>Popular Tags</TagsHeader>
+        <TagButton onClick={() => onTagSelect('allArticles')}>
+          <Tag>All</Tag>
+        </TagButton>
         {tags.map((item) => (
           <TagButton key={item.id} onClick={() => onTagSelect(item.name)}>
             <Tag>{item.name}</Tag>

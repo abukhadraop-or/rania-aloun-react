@@ -4,7 +4,7 @@
  * @param {Object[]} items Arrays to be filtered.
  * @param {string}   selectedTag Selected tag.
  *
- * @return {array} Array of filtered articles.
+ * @return {Object[]} Array of filtered articles.
  */
 export default (items, selectedTag) => {
   const filteredArticles = items.filter((item) =>

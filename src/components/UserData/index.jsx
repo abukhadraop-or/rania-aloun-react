@@ -13,8 +13,8 @@ import {
  * Component showing the publisher data in the article card header.
  *
  * @param {Object} props Props passed to UserData Container.
- * @param {String} props.userName Name of article publisher.
- * @param {String} props.publishDate Date of publishing the article.
+ * @param {string} props.userName Name of article publisher.
+ * @param {string} props.publishDate Date of publishing the article.
  *
  * @return {JSX.Element} Container holding the passed article's publisher data.
  */

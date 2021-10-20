@@ -5,7 +5,7 @@ import PageContent from 'components/PageContent';
 import { ToastContainer } from 'react-toastify';
 
 /**
- * Component holding the home pages main components
+ * Component holding the home pages main components.
  */
 function Home() {
   return (

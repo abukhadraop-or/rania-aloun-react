@@ -3,7 +3,7 @@ import Tags from 'components/Tags';
 import Articles from 'components/Articles';
 import Pagination from 'components/Pagination';
 import getArticles from 'services/articles-service';
-import config from 'config.json';
+import config from 'config';
 import { Container, InnerContainer } from './page-content.styles';
 
 /**
@@ -18,6 +18,9 @@ function PageContent() {
   const [totalArticles, setTotalArticles] = useState(0);
 
   useEffect(() => {
+    /**
+     * Calls getArticles service and assign the articles data to it's state, and sets their count to the totalArticles state.
+     */
     const fetchArticles = async () => {
       const { data } = await getArticles(currentPage, config.pageSize);
       setArticles(data.articles);
@@ -26,10 +29,20 @@ function PageContent() {
     fetchArticles();
   }, [currentPage]);
 
+  /**
+   * Handles page change on click on pagination component.
+   *
+   * @param {Number} page Page number selected by user.
+   */
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
+  /**
+   * Handles tag select on click on a tag.
+   *
+   * @param {String} tag Selected tag for filtering.
+   */
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);
   };

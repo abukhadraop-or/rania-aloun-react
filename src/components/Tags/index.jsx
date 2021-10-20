@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAllTags } from 'services/tags-service';
+import { getTags } from 'services/tags-service';
 import ProbTypes from 'prop-types';
 import {
   Tag,
@@ -13,7 +13,7 @@ import {
  * Component holding the tags in a container.
  *
  * @param {Object}   props Props passed to Tags component.
- * @param {function} props.onTagSelect Changes previewed articles based on tag selection.
+ * @param {Function} props.onTagSelect Changes previewed articles based on tag selection.
  *
  * @return {JSX.Element} Container holding all the tags of the articles.
  */
@@ -21,8 +21,11 @@ function Tags({ onTagSelect }) {
   const [tags, setTags] = useState([]);
 
   useEffect(() => {
+    /**
+     * Calls getTags service and assign tags names to tags state.
+     */
     const fetchTags = async () => {
-      const { data } = await getAllTags();
+      const { data } = await getTags();
       setTags(data);
     };
     fetchTags();

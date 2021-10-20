@@ -11,7 +11,7 @@ import {
 } from 'components/Logging/logging';
 
 /**
- * Component holding temporary text for sign in page, to be implemented
+ * Component holding the sign in page's main components.
  */
 function SignIn() {
   return (

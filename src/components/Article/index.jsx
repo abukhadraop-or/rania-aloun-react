@@ -14,8 +14,8 @@ import {
 /**
  * Component holding the article card.
  *
- * @param {Object} props Passed props to Article function.
- * @param {Object[]} data Passed article.
+ * @param {Object}   props Passed props to Article function.
+ * @param {Object[]} props.data Passed article.
  *
  * @return {JSX.Element} Article card holding all the article's data.
  */

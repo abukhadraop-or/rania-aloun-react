@@ -5,7 +5,8 @@ import _ from 'lodash';
  *
  * @param {Object[]} items Articles to be paginated.
  * @param {number}   pageNumber Current page number in page.
- * @return  {array} Array of sliced articles.
+ *
+ * @return {array} Array of sliced articles.
  */
 export default (items, pageNumber) => {
   const pageSize = 3;

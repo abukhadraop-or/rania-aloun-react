@@ -1,4 +1,4 @@
-import config from 'config.json';
+import config from 'config';
 import http from './http-service';
 
 /**
@@ -6,5 +6,5 @@ import http from './http-service';
  *
  * @return {Promise} A promise returns array of tags as a response if resolved.
  */
-export const getAllTags = () => http.get(`${config.apiEndpoint}tags`);
-export default { getAllTags };
+export const getTags = () => http.get(`${config.apiEndpoint}tags`);
+export default { getTags };

@@ -24,9 +24,9 @@ export const Text = styled.p`
 export const Link = styled.a`
   color: ${colors.boringGreen};
   text-decoration: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: bold;
-  margin: 10px;
+  margin: 0.625rem;
 `;
 
 export const CardContainer = styled.form`
@@ -34,7 +34,7 @@ export const CardContainer = styled.form`
   flex-direction: column;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 `;
 
 export const Input = styled.input`
@@ -42,7 +42,7 @@ export const Input = styled.input`
   border-radius: 0.25rem;
   height: 1.25rem;
   margin: 0;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   width: 23.125rem;
   border: none;
   outline: 0.0625rem solid ${colors.ashGrey};
@@ -57,7 +57,7 @@ export const SubmitBtn = styled.input`
   background-color: ${colors.boringGreen};
   color: white;
   border: none;
-  height: 40px;
-  width: 80px;
-  border-radius: 5px;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 0.3125rem;
 `;

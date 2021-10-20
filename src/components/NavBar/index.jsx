@@ -16,6 +16,9 @@ import {
 function NavBar() {
   const [isClicked, setClicked] = useState(false);
 
+  /**
+   * Toggles the click state of the menu icon.
+   */
   const handleClick = () => {
     setClicked(!isClicked);
   };

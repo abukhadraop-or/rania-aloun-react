@@ -37,8 +37,8 @@ function Pagination({ totalArticles, onPageChange }) {
 
   const pages = paginate();
 
-  if (isNeeded) {
-    return (
+  return (
+    isNeeded && (
       <PagesContainer>
         <PagesList>
           {pages.map((page) => (
@@ -48,9 +48,8 @@ function Pagination({ totalArticles, onPageChange }) {
           ))}
         </PagesList>
       </PagesContainer>
-    );
-  }
-  return null;
+    )
+  );
 }
 
 Pagination.propTypes = {

@@ -1,3 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Pagination /> matches snapshot 1`] = `""`;
+exports[`<Pagination /> matches snapshot 1`] = `
+<styled.nav>
+  <styled.ul>
+    <styled.li
+      key="0"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        0
+      </styled.button>
+    </styled.li>
+    <styled.li
+      key="1"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        1
+      </styled.button>
+    </styled.li>
+    <styled.li
+      key="2"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        2
+      </styled.button>
+    </styled.li>
+    <styled.li
+      key="3"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        3
+      </styled.button>
+    </styled.li>
+  </styled.ul>
+</styled.nav>
+`;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> matches snapshot 1`] = `
+<Fragment>
+  <styled.ul
+    isClicked={false}
+  >
+    <styled.li>
+      <Styled(NavLink)
+        to="/home"
+      >
+         Home 
+      </Styled(NavLink)>
+    </styled.li>
+    <styled.li>
+      <Styled(NavLink)
+        to="/sign-in"
+      >
+        Sign in
+      </Styled(NavLink)>
+    </styled.li>
+    <styled.li>
+      <Styled(NavLink)
+        to="/sign-up"
+      >
+        Sign up
+      </Styled(NavLink)>
+    </styled.li>
+  </styled.ul>
+  <styled.button
+    onClick={[Function]}
+  >
+    <Styled(Component) />
+  </styled.button>
+</Fragment>
+`;

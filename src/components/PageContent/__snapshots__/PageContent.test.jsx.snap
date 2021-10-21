@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageContent /> matches screenshot 1`] = `
+<styled.div>
+  <Tags
+    onTagSelect={[Function]}
+  />
+  <styled.div>
+    <Articles
+      articles={Array []}
+      currentPage={0}
+      selectedTag="allArticles"
+    />
+    <Pagination
+      onPageChange={[Function]}
+      totalArticles={0}
+    />
+  </styled.div>
+</styled.div>
+`;

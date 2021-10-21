@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Header from '.';
+import UserData from '.';
 
-describe('<Header />', () => {
+describe('<UserData />', () => {
   it('matches snapshot', () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(
+      <UserData userName="Rania" publishDate="18/10/2020" />
+    );
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

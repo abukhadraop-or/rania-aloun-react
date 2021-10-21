@@ -1,14 +1,12 @@
-// import React from 'react';
-// import Enzyme, { mount } from 'enzyme';
-// import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import React from 'react';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 // import { act } from '@testing-library/react';
-// import getArticles from 'services/articles-service';
+// import getAllArticles from 'services/articles-service';
 // import Articles from 'components/Articles';
-// import PageContent from '.';
+import PageContent from '.';
 
-// Enzyme.configure({ adapter: new Adapter() });
-
-// jest.mock('services/get-articles', () => jest.fn());
+// jest.mock('services/articles-service', () => jest.fn());
 
 // const mockedData = {
 //   data: [
@@ -39,16 +37,18 @@
 //   ],
 // };
 
-// describe('<PageContent />', () => {
-//   it('sets fetched data to articles', async () => {
-//     const promise = Promise.resolve();
-//     getArticles.mockReturnValue(mockedData);
-//     const wrapper = mount(<PageContent />);
-
-//     await act(() => promise);
-//     wrapper.update();
-
-//     const { articles } = wrapper.find(Articles).props();
-//     expect(articles).toEqual(mockedData.data);
-//   });
-// });
+describe('<PageContent />', () => {
+  it('matches screenshot', () => {
+    const wrapper = shallow(<PageContent />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+  //   it('sets fetched data to articles', async () => {
+  //     const promise = Promise.resolve();
+  //     getAllArticles.mockReturnValue(mockedData);
+  //     const wrapper = mount(<PageContent />);
+  //     await act(() => promise);
+  //     wrapper.update();
+  //     const { articles } = wrapper.find(Articles).props();
+  //     expect(articles).toEqual(mockedData.data);
+  //   });
+});

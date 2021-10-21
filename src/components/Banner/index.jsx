@@ -6,7 +6,7 @@ import { Container, BannerTitle, BannerText } from './banner.styles';
  *
  * @return {JSX.Element} Banner holding application title and a paragraph.
  */
-function index() {
+function Banner() {
   return (
     <Container>
       <BannerTitle>conduit</BannerTitle>
@@ -15,4 +15,4 @@ function index() {
   );
 }
 
-export default index;
+export default Banner;

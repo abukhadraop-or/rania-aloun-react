@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyComponent renders correctly 1`] = `ShallowWrapper {}`;
+exports[`MyComponent matches snapshot 1`] = `
+<styled.div>
+  <ArticleHeader />
+  <styled.p>
+    title test
+  </styled.p>
+  <styled.p>
+    link test
+  </styled.p>
+  <styled.div>
+    <styled.p>
+      Read more...
+    </styled.p>
+    <styled.div>
+      <styled.p
+        key="0"
+      >
+        name test
+      </styled.p>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

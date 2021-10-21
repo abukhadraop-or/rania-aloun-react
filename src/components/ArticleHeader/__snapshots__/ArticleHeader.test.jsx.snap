@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleHeader /> renders correctly 1`] = `
+<styled.div>
+  <UserData />
+  <styled.button
+    onClick={[Function]}
+  >
+    <Styled(Component) />
+    <styled.p />
+  </styled.button>
+</styled.div>
+`;

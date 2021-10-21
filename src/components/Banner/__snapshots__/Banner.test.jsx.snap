@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> matches snapshot 1`] = `
+<styled.div>
+  <styled.p>
+    conduit
+  </styled.p>
+  <styled.p>
+    A place to share your knowledge.
+  </styled.p>
+</styled.div>
+`;

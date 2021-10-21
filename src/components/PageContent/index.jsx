@@ -23,6 +23,7 @@ function PageContent() {
      */
     const fetchArticles = async () => {
       const { data } = await getArticles(currentPage, config.pageSize);
+      console.log(data, '------------');
       setArticles(data.articles);
       setTotalArticles(data.totalItems);
     };

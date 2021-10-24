@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getTags } from 'services/tags-service';
+import getTags from 'services/tags-service';
 import ProbTypes from 'prop-types';
 import {
   Tag,
@@ -25,8 +25,13 @@ function Tags({ onTagSelect }) {
      * Calls getTags service and assign tags names to tags state.
      */
     const fetchTags = async () => {
-      const { data } = await getTags();
-      setTags(data);
+      try {
+        const { data } = await getTags();
+        setTags(data);
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.log(err);
+      }
     };
     fetchTags();
   }, []);

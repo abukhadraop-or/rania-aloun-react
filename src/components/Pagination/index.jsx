@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 import ProbTypes from 'prop-types';
 import config from 'config';
@@ -19,36 +19,31 @@ import {
  * @return {JSX.Element} Pages numbers in a component at the bottom of the page.
  */
 function Pagination({ totalArticles, onPageChange }) {
-  let isNeeded = true;
+  const [pages, setPages] = useState([]);
 
-  /**
-   * Calculates the needed page numbers, if there is only one page, it toggles the isNeeded state to hide the pagination component.
-   *
-   * @return {Number[]} Array holding pages numbers to be rendered.
-   */
-  const paginate = () => {
+  useEffect(() => {
     const pagesCount = Math.ceil(totalArticles / config.pageSize);
-    if (pagesCount === 1) {
-      isNeeded = false;
-    }
-    const pages = _.range(0, pagesCount);
-    return pages;
-  };
 
-  const pages = paginate();
+    const pagesRange = _.range(0, pagesCount);
+    setPages(pagesRange);
+  }, [totalArticles]);
 
   return (
-    isNeeded && (
-      <PagesContainer>
-        <PagesList>
-          {pages.map((page) => (
-            <PageNumber key={page}>
-              <PageButton onClick={() => onPageChange(page)}>{page}</PageButton>
-            </PageNumber>
-          ))}
-        </PagesList>
-      </PagesContainer>
-    )
+    <>
+      {pages.length > 1 && (
+        <PagesContainer>
+          <PagesList>
+            {pages.map((page) => (
+              <PageNumber key={page}>
+                <PageButton onClick={() => onPageChange(page)}>
+                  {page}
+                </PageButton>
+              </PageNumber>
+            ))}
+          </PagesList>
+        </PagesContainer>
+      )}
+    </>
   );
 }
 

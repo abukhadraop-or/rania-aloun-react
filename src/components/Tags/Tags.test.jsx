@@ -43,13 +43,4 @@ describe('<Tags />', () => {
     tagButton.simulate('click');
     expect(wrapper.props().onTagSelect).toHaveBeenCalled();
   });
-
-  // it('calls onPageChange on click', () => {
-  //   const wrapper = mount(
-  //     <Pagination totalArticles={8} onPageChange={jest.fn()} />
-  //   );
-  //   const pageButton = wrapper.find(PageButton).at(1);
-  //   pageButton.simulate('click');
-  //   expect(wrapper.props().onPageChange).toHaveBeenCalled();
-  // });
 });

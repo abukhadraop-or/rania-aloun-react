@@ -6,7 +6,7 @@ import http from './http-service';
  *
  * @return {Promise} A promise returns array of articles as a response if resolved.
  */
-export const getAllArticles = (page, size) =>
+const getAllArticles = (page, size) =>
   http.get(`${config.apiEndpoint}articles?page=${page}&size=${size}`);
 
 export default getAllArticles;

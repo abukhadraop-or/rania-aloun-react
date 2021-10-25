@@ -10,7 +10,7 @@ MockPaginate.mockReturnValue([0, 1, 2]);
 describe('<Pagination />', () => {
   it('matches snapshot', () => {
     const wrapper = shallow(
-      <Pagination totalArticles={8} onPageChange={jest.fn()} />
+      <Pagination totalArticles={4} onPageChange={jest.fn()} />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

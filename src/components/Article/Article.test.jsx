@@ -11,6 +11,10 @@ describe('MyComponent', () => {
           articleTitle: 'title test',
           link: 'link test',
           tags: [{ id: 0, name: 'name test' }],
+          id: 1,
+          liked: 5,
+          userName: 'Rania',
+          publishDate: '2021-05-08T21:00:00.000Z',
         }}
       />
     );

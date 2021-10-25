@@ -5,9 +5,13 @@ import { act } from '@testing-library/react';
 import getArticles from 'services/articles-service';
 import Articles from 'components/Articles';
 // import Pagination from 'components/Pagination';
+import { toast } from 'react-toastify';
+
 import PageContent from '.';
 
 jest.mock('services/articles-service', () => jest.fn());
+
+const toastErrorSpy = jest.spyOn(toast, 'error');
 
 const mockedData = {
   data: {

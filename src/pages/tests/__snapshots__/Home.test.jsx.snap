@@ -3,23 +3,6 @@
 exports[`<Home /> matches snapshot 1`] = `
 <Fragment>
   <Header />
-  <ToastContainer
-    autoClose={5000}
-    closeButton={[Function]}
-    closeOnClick={true}
-    draggable={true}
-    draggableDirection="x"
-    draggablePercent={80}
-    hideProgressBar={false}
-    newestOnTop={false}
-    pauseOnFocusLoss={true}
-    pauseOnHover={true}
-    position="top-right"
-    role="alert"
-    rtl={false}
-    theme="light"
-    transition={[Function]}
-  />
   <Banner />
   <PageContent />
 </Fragment>

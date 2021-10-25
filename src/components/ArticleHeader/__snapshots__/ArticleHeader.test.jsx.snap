@@ -1,13 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ArticleHeader /> renders correctly 1`] = `
-<styled.div>
-  <UserData />
-  <styled.button
-    onClick={[Function]}
-  >
-    <Styled(Component) />
-    <styled.p />
-  </styled.button>
-</styled.div>
+<ArticleHeader
+  id={1}
+  liked={5}
+  publishDate="2021-05-08T21:00:00.000Z"
+  userName="Rania"
+>
+  <styled.div>
+    <div
+      className="sc-jSgvzq gyKoCI"
+    >
+      <UserData
+        publishDate="2021-05-08T21:00:00.000Z"
+        userName="Rania"
+      >
+        <styled.div>
+          <div
+            className="sc-bdfBQB gncSxe"
+          >
+            <styled.img
+              src="smile.jpg"
+            >
+              <img
+                className="sc-gsTEea bOTPBo"
+                src="smile.jpg"
+              />
+            </styled.img>
+            <styled.div>
+              <div
+                className="sc-dlfnuX jPbrRG"
+              >
+                <styled.p>
+                  <p
+                    className="sc-hKgJUU hhDhGq"
+                  >
+                    Rania
+                  </p>
+                </styled.p>
+                <styled.p>
+                  <p
+                    className="sc-eCstlR icDyXb"
+                  >
+                    2021-05-08T21:00:00.000Z
+                  </p>
+                </styled.p>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </UserData>
+      <styled.button
+        onClick={[Function]}
+      >
+        <button
+          className="sc-jrAFXE iUcjyc"
+          onClick={[Function]}
+        >
+          <Styled(Component)>
+            <ForwardRef(SvgEmptyHeart)
+              className="sc-pGacB chSIiT"
+            >
+              <svg
+                className="sc-pGacB chSIiT"
+              >
+                empty-heart.svg
+              </svg>
+            </ForwardRef(SvgEmptyHeart)>
+          </Styled(Component)>
+          <styled.p>
+            <p
+              className="sc-iBPTik iYGxSJ"
+            >
+              5
+            </p>
+          </styled.p>
+        </button>
+      </styled.button>
+    </div>
+  </styled.div>
+</ArticleHeader>
 `;

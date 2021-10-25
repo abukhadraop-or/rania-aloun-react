@@ -26,7 +26,7 @@ function ArticleHeader({ id, liked, userName, publishDate }) {
   const [count, setCount] = useState(liked);
 
   /**
-   * Function handles like click on the article, calls the updating service and changes the count on the article.
+   * Handles like click on the article, calls the updating service and changes the count on the article.
    */
   const handleLike = async () => {
     const trigger = isLiked ? -1 : 1;

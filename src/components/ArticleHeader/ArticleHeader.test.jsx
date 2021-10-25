@@ -1,72 +1,66 @@
 /* eslint-disable jest/no-commented-out-tests */
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-// import updateLikes from 'services/update-likes';
-
+import { act } from '@testing-library/react';
 import ArticleHeader from '.';
-// import {
-//   LikeIcon,
-//   LikesCount,
-//   UnLikeIcon,
-//   LikeButtonContainer,
-// } from './article-header.styles';
-// import { act } from '@testing-library/react';
+import {
+  LikeButtonContainer,
+  LikeIcon,
+  LikesCount,
+  UnLikeIcon,
+} from './article-header.styles';
 
-// Enzyme.configure({ adapter: new Adapter() });
-
-// jest.mock('services/update-likes', () => jest.fn());
-
-// const mockedData = {
-//   data: 'likes updated',
-// };
+jest.mock('services/update-likes', () => jest.fn());
 
 describe('<ArticleHeader />', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <ArticleHeader
-        article={{
-          id: 1,
-          liked: 5,
-          userName: 'Rania',
-          publishDate: '2021-05-08T21:00:00.000Z',
-        }}
+        id={1}
+        liked={5}
+        userName="Rania"
+        publishDate="2021-05-08T21:00:00.000Z"
       />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  // it('handles like click', async () => {
-  //   const promise = Promise.resolve();
-  //   updateLikesservice.mockReturnValue(mockedData);
+  const wrapper = shallow(
+    <ArticleHeader
+      id={1}
+      liked={5}
+      userName="Rania"
+      publishDate="2021-05-08T21:00:00.000Z"
+    />
+  );
 
-  //   await act(() => promise);
-  //   wrapper.update();
+  it('handles like button click', async () => {
+    const likeBtn = wrapper.find(LikeButtonContainer);
+    likeBtn.simulate('click');
+    await act(() => Promise.resolve());
+    wrapper.update();
+    const counter = wrapper.find(LikesCount);
+    const likeIcon = wrapper.find(LikeIcon);
+    const unLikeIcon = wrapper.find(UnLikeIcon);
 
-  //   const {}
-  // });
+    expect(counter.text()).toEqual('6');
+    expect(likeIcon.exists()).toBeTruthy();
+    expect(unLikeIcon.exists()).toBeFalsy();
+  });
 
-  //   it('renders liked icon when liked button is clicked', () => {
-  //     const likeButton = wrapper.find(LikeButtonContainer);
-  //     likeButton.simulate('click');
-  //     const likeIcon = wrapper.find(LikeIcon);
-  //     const unLikeIcon = wrapper.find(UnLikeIcon);
-  //     const likesCount = wrapper.find(LikesCount);
+  it('clicks like button again', async () => {
+    const likeBtn = wrapper.find(LikeButtonContainer);
+    likeBtn.simulate('click');
+    await act(() => Promise.resolve());
+    wrapper.update();
 
-  //     expect(likeIcon.exists()).toBeTruthy();
-  //     expect(unLikeIcon.exists()).toBeFalsy();
-  //     expect(likesCount.text()).toEqual('6');
-  //   });
+    const counter = wrapper.find(LikesCount);
+    const likeIcon = wrapper.find(LikeIcon);
+    const unLikeIcon = wrapper.find(UnLikeIcon);
 
-  //   it('renders unliked icon when liked button is toggled', () => {
-  //     const LikeButton = wrapper.find(LikeButtonContainer);
-  //     LikeButton.simulate('click');
-  //     const likeIcon = wrapper.find(LikeIcon);
-  //     const unLikeIcon = wrapper.find(UnLikeIcon);
-  //     const likesCount = wrapper.find(LikesCount);
-
-  //     expect(likeIcon.exists()).toBeFalsy();
-  //     expect(unLikeIcon.exists()).toBeTruthy();
-  //     expect(likesCount.text()).toEqual('5');
-  //   });
+    expect(counter.text()).toEqual('5');
+    expect(likeIcon.exists()).toBeFalsy();
+    expect(unLikeIcon.exists()).toBeTruthy();
+  });
 });

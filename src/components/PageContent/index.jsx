@@ -16,15 +16,19 @@ function PageContent() {
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedTag, setSelectedTag] = useState('allArticles');
   const [totalArticles, setTotalArticles] = useState(0);
-
   useEffect(() => {
     /**
      * Calls getArticles service and assign the articles data to it's state, and sets their count to the totalArticles state.
      */
+
     const fetchArticles = async () => {
-      const { data } = await getArticles(currentPage, config.pageSize);
-      setArticles(data.articles);
-      setTotalArticles(data.totalItems);
+      try {
+        const { data } = await getArticles(currentPage, config.pageSize);
+        setArticles(data.articles);
+        setTotalArticles(data.totalItems);
+      } catch (e) {
+        console.log(e);
+      }
     };
     fetchArticles();
   }, [currentPage]);

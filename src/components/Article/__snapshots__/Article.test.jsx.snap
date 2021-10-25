@@ -2,7 +2,12 @@
 
 exports[`MyComponent matches snapshot 1`] = `
 <styled.div>
-  <ArticleHeader />
+  <ArticleHeader
+    id={1}
+    liked={5}
+    publishDate="2021-05-08T21:00:00.000Z"
+    userName="Rania"
+  />
   <styled.p>
     title test
   </styled.p>

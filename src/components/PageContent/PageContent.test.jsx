@@ -4,7 +4,6 @@ import toJson from 'enzyme-to-json';
 import { act } from '@testing-library/react';
 import getArticles from 'services/articles-service';
 import Articles from 'components/Articles';
-// import Pagination from 'components/Pagination';
 
 import PageContent from '.';
 

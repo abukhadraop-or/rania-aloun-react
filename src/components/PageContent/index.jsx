@@ -27,6 +27,7 @@ function PageContent() {
         setArticles(data.articles);
         setTotalArticles(data.totalItems);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.log(e);
       }
     };
@@ -36,7 +37,7 @@ function PageContent() {
   /**
    * Handles page change on click on pagination component.
    *
-   * @param {Number} page Page number selected by user.
+   * @param {number} page Page number selected by user.
    */
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -45,7 +46,7 @@ function PageContent() {
   /**
    * Handles tag select on click on a tag.
    *
-   * @param {String} tag Selected tag for filtering.
+   * @param {string} tag Selected tag for filtering.
    */
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);

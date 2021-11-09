@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> matches snapshot 1`] = `
+<styled.header>
+  <styled.p>
+    <Styled(Link)
+      to="/"
+    >
+      conduit
+    </Styled(Link)>
+  </styled.p>
+  <NavBar />
+</styled.header>
+`;

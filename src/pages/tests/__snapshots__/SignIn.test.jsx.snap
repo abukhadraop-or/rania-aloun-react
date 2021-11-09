@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignIn /> matches snapshot 1`] = `
+<Fragment>
+  <Header />
+  <LoginForm />
+</Fragment>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyComponent matches snapshot 1`] = `
+<styled.div>
+  <ArticleHeader
+    id={1}
+    liked={5}
+    publishDate="2021-05-08T21:00:00.000Z"
+    userName="Rania"
+  />
+  <styled.p>
+    title test
+  </styled.p>
+  <styled.p>
+    link test
+  </styled.p>
+  <styled.div>
+    <styled.p>
+      Read more...
+    </styled.p>
+    <styled.div>
+      <styled.p
+        key="0"
+      >
+        name test
+      </styled.p>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserData /> matches snapshot 1`] = `
+<styled.div>
+  <styled.img
+    src="smile.jpg"
+  />
+  <styled.div>
+    <styled.p>
+      Rania
+    </styled.p>
+    <styled.p>
+      18/10/2020
+    </styled.p>
+  </styled.div>
+</styled.div>
+`;

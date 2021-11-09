@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUp /> matches snapshot 1`] = `
+<Fragment>
+  <Header />
+  <styled.div>
+    <styled.div>
+      <styled.h1>
+        Sign Up
+      </styled.h1>
+      <styled.a
+        href="www.google.com"
+      >
+        Have an account?
+      </styled.a>
+    </styled.div>
+    <styled.form>
+      <styled.input
+        id="username"
+        name="username"
+        placeholder="Username"
+        type="text"
+      />
+      <br />
+      <styled.input
+        id="email"
+        name="email"
+        placeholder="Email"
+        type="text"
+      />
+      <br />
+      <styled.input
+        id="password"
+        name="password"
+        placeholder="Password"
+        type="password"
+      />
+      <br />
+      <styled.input
+        type="submit"
+        value="Sign Up"
+      />
+    </styled.form>
+  </styled.div>
+</Fragment>
+`;

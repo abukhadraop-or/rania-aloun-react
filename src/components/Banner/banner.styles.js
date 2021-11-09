@@ -5,10 +5,11 @@ import breakpoints from 'styles/break-points';
 export const Container = styled.div`
   align-items: center;
   background-color: ${colors.boringGreen};
-  box-shadow: inset 0 -0.438rem 0.563rem -0.438rem rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 -0.438rem 0.563rem -0.438rem rgba(0, 0, 0, 0.4),
+    inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  height: 10.3125rem;
+  height: 10.5625rem;
   padding: 1.5rem 0;
 `;
 

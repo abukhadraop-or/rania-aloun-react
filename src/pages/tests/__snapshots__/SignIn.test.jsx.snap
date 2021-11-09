@@ -3,37 +3,6 @@
 exports[`<SignIn /> matches snapshot 1`] = `
 <Fragment>
   <Header />
-  <styled.div>
-    <styled.div>
-      <styled.p>
-        Sign In
-      </styled.p>
-      <styled.a
-        href="www.google.com"
-      >
-        Need an account?
-      </styled.a>
-    </styled.div>
-    <styled.form>
-      <styled.input
-        id="email"
-        name="email"
-        placeholder="Email"
-        type="text"
-      />
-      <br />
-      <styled.input
-        id="password"
-        name="password"
-        placeholder="Password"
-        type="password"
-      />
-      <br />
-      <styled.input
-        type="submit"
-        value="Sign in"
-      />
-    </styled.form>
-  </styled.div>
+  <LoginForm />
 </Fragment>
 `;

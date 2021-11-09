@@ -5,9 +5,9 @@ exports[`<SignUp /> matches snapshot 1`] = `
   <Header />
   <styled.div>
     <styled.div>
-      <styled.p>
+      <styled.h1>
         Sign Up
-      </styled.p>
+      </styled.h1>
       <styled.a
         href="www.google.com"
       >

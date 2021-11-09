@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const TagsHeader = styled.p`
   font-family: 'source sans pro', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.0625rem;
   margin: 0 0 0.5rem 0;
   padding: 0 0.5rem;
   width: 100%;

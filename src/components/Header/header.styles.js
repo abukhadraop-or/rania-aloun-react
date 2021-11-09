@@ -5,7 +5,6 @@ import breakpoints from 'styles/break-points';
 
 export const Container = styled.header`
   align-items: center;
-  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
   height: 3.5rem;

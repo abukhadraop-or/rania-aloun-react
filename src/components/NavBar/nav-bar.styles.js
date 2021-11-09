@@ -15,13 +15,14 @@ export const Container = styled.ul`
   margin: 0;
 
   @media (max-width: ${breakpoints.mobile}) {
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.8);
     flex-direction: column;
     display: ${({ isClicked }) => (isClicked ? 'static' : 'none')};
     position: absolute;
     top: 3.5rem;
     width: 100%;
     right: 0;
+    padding: 0;
   }
 `;
 
@@ -40,7 +41,6 @@ export const NavElement = styled.li`
     flex-direction: column;
     padding: 0.5rem 0;
     right: 0;
-    margin: 0;
     width: 100%;
   }
 `;
